@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="<%= data.image%>">
+    <p> <%= data.name%>  </p>
+    <p> <%= data.level%>  </p>
+
+    <form action="/update/<% data.id%>?_method=put" method="post">
+    
+
+        <label for="">image_url <input type="text" name="image" value="<%= data.image%>" ></label>
+        <label for="">name <input type="text" name="name" value="<%= data.name%>" ></label>
+        <label for="">levle <input type="text" name="level" value="<%= data.level%>" ></label>
+
+
+    <button type="submit"> update</button>
+    </form>
+   
+
+</body>
+</html>

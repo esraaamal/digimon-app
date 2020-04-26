@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<% data.forEach(val=>{ %>
+    <div class="conatainer">
+<img src="<%= val.image%>">
+<p> <%= val.name%>  </p>
+<p> <%= val.level%>  </p>
+ <form action="/book" method="get">
+<input type="hidden" name="image" value="<%= val.image%>">
+<input type="hidden" name="name" value="<%= val.name%>">
+<input type="hidden" name="level" value="<%= val.level%>">
+
+<button type="submit"> add digimon to favorit</button>
+
+
+</form>
+</div>
+
+
+<%})%>
+
+
+
+</body>
+</html>
